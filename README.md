@@ -18,3 +18,7 @@
 
 ## Run python script
 - Type `python <filename>.py`
+
+## Dependency installation
+- generate requirements.txt: `pip freeze > requirements.txt`
+- install necessary dependencies: `pip install -r requirements.txt`
