@@ -10,10 +10,15 @@
 - git push
 - git pull
 
-## Create python and use virtual environment
+## Create and use virtual environment
 - Use `python3 -m venv .venv` or `python -m venv .venv`
 - Create `.gitignore` file and include the folder `.venv` (i.e., exclude it from version control).
-- Activate environment via `.venv\Scripts\Activate.ps1`
+- Activate environment via `.venv\Scripts\Activate.ps1` (Windows PowerShell)
+- Deactivate environment via `deactivate`
 
 ## Run python script
-- Type `python test.py`
+- Type `python <filename>.py`
+
+## Dependency installation
+- generate requirements.txt: `pip freeze > requirements.txt`
+- install necessary dependencies: `pip install -r requirements.txt`
