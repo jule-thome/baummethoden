@@ -58,6 +58,10 @@ x_variables = data.loc[:, data.columns != 'class']
 #splits into training and test data
 x_train, x_test, y_train, y_test = train_test_split(x_variables, y_variable, test_size=0.2)
 
+#save test data for later predictions
+x_test.to_csv("x_test.csv", index=False)
+y_test.to_csv("y_test.csv", index=False)
+
 # shapes of our data splits
 print("Shapes of our training and test data split ...")
 print(x_train.shape) 
@@ -164,6 +168,9 @@ print("--- Random Forest ---")
 print('Accuracy Random Forest ' + str(round(accuracy_rand,4)))
 print('Old accuracy: ' + str(round(mean_accuracy,4)))
 print('Best tree accuracy: ' + str(round(mean_accuracy_best_parameters_tree,4)))
+
+#Fit random forest
+random_forest_classifier.fit(x_train, y_train)
 
 '''
 Model save using pickle
