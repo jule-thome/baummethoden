@@ -1,8 +1,8 @@
-import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import pickle
+
 
 '''
 Read CSV
@@ -42,6 +42,7 @@ random_forest_classifier = RandomForestClassifier(n_estimators=10)
 
 #Train random forest
 random_forest_classifier.fit(x_train, y_train)
+
 
 '''
 Model save using pickle
