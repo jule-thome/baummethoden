@@ -42,9 +42,11 @@ random_forest_classifier = RandomForestClassifier(n_estimators=10)
 
 #Train random forest
 random_forest_classifier.fit(x_train, y_train)
+print("Model trained successfully.")
 
 
 '''
 Model save using pickle
 '''
 pickle.dump(random_forest_classifier, open("models/baummethoden.pkl", "wb"))
+print("Model pickled successfully.")
