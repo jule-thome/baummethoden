@@ -5,10 +5,10 @@ from sklearn.metrics import classification_report,confusion_matrix
 '''
 Read test data and load baummethoden.pkl
 '''
-x_test = pd.read_csv("x_test.csv")
-y_test = pd.read_csv("y_test.csv")
+x_test = pd.read_csv("data/x_test.csv")
+y_test = pd.read_csv("data/y_test.csv")
 
-baummethoden = pickle.load(open( "baummethoden.pkl", "rb" ))
+baummethoden = pickle.load(open("models/baummethoden.pkl", "rb"))
 
 
 '''

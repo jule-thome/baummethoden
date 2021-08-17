@@ -15,7 +15,7 @@ Read CSV
 attribute_names = ['variance_wavelet_transformed_image', 'skewness_wavelet_transformed_image', 'curtosis_wavelet_transformed_image', 'entropy_image', 'class']
 
 #Read csv-file
-data = pd.read_csv('data_banknote_authentication.csv', names=attribute_names)
+data = pd.read_csv('data/data_banknote_authentication.csv', names=attribute_names)
 
 #Shuffle data
 data = data.sample(frac=1)
@@ -59,8 +59,8 @@ x_variables = data.loc[:, data.columns != 'class']
 x_train, x_test, y_train, y_test = train_test_split(x_variables, y_variable, test_size=0.2)
 
 #save test data for later predictions
-x_test.to_csv("x_test.csv", index=False)
-y_test.to_csv("y_test.csv", index=False)
+x_test.to_csv("data/x_test.csv", index=False)
+y_test.to_csv("data/y_test.csv", index=False)
 
 # shapes of our data splits
 print("Shapes of our training and test data split ...")
@@ -175,4 +175,4 @@ random_forest_classifier.fit(x_train, y_train)
 '''
 Model save using pickle
 '''
-pickle.dump(random_forest_classifier, open("baummethoden.pkl", "wb"))
+pickle.dump(random_forest_classifier, open("models/baummethoden.pkl", "wb"))
