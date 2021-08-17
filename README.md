@@ -22,3 +22,6 @@
 ## Dependency installation
 - generate requirements.txt: `pip freeze > requirements.txt`
 - install necessary dependencies: `pip install -r requirements.txt`
+
+# Baummethoden
+[Code and data source](https://limebit.de/jupyter/Baummethoden)
