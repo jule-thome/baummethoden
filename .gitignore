@@ -1,1 +1,4 @@
 .venv
+models/*.pkl
+data/x_test.csv
+data/y_test.csv
