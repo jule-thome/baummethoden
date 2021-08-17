@@ -6,6 +6,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.model_selection import KFold, cross_val_score
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
+import pickle
 
 '''
 Read CSV
@@ -163,3 +164,8 @@ print("--- Random Forest ---")
 print('Accuracy Random Forest ' + str(round(accuracy_rand,4)))
 print('Old accuracy: ' + str(round(mean_accuracy,4)))
 print('Best tree accuracy: ' + str(round(mean_accuracy_best_parameters_tree,4)))
+
+'''
+Model save using pickle
+'''
+pickle.dump(random_forest_classifier, open("baummethoden.pkl", "wb"))
