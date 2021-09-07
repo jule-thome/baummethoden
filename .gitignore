@@ -1,4 +1,5 @@
 .venv
 models/*.pkl
+models/*.pickle
 data/x_test.csv
 data/y_test.csv
