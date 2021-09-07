@@ -23,3 +23,8 @@ jobs:
       - name: Train model
         run: |
           python train.py
+      - name: Upload trained model
+        uses: actions/upload-artifact@v2
+        with:
+          name: baummethoden.pkl
+          path: models/baummethoden.pkl
